@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: users-api-config
+  namespace: fcg
+  labels:
+    app: users-api
+data:
+  Jwt__Emissor: "FCG-UsersAPI"
+  Jwt__Audiencia: "FCG-Microsservicos"
+  Jwt__ExpiracaoHoras: "8"
+  RabbitMQ__Host: "rabbitmq"
+  RabbitMQ__Username: "guest"
+  ASPNETCORE_ENVIRONMENT: "Production"
