@@ -18,26 +18,6 @@ Microsserviço de gerenciamento de usuários da plataforma **FIAP Cloud Games**.
 
 ---
 
-## Arquitetura
-
-O projeto segue **Clean Architecture** com separação estrita de camadas:
-
-```
-UsersAPI/
-├── src/
-│   ├── FCG.Users.Domain/        ← Entidades, regras de negócio, helpers
-│   ├── FCG.Users.Application/   ← DTOs, interfaces, serviços de aplicação
-│   ├── FCG.Users.Infrastructure/← EF Core, repositórios, mensageria
-│   └── FCG.Users.API/           ← Controllers, middlewares, Program.cs
-└── tests/
-    ├── FCG.Users.Domain.Tests/
-    └── FCG.Users.Application.Tests/
-```
-
-**Regra de dependência**: Domain ← Application ← Infrastructure ← API
-
----
-
 ## Endpoints
 
 ### Autenticação
@@ -75,6 +55,17 @@ UsersAPI/
 
 ---
 
+## Baixar Projetos
+
+Deverá ser feito o clone do projeto.
+
+```bash
+# UsersAPI
+git clone https://github.com/diogo138/fiap-cloud-games-users-api.git
+```
+
+---
+
 ## Como Rodar Localmente (Docker Compose)
 
 **Pré-requisitos**: Docker Desktop instalado e em execução.
@@ -108,7 +99,7 @@ docker-compose down -v
 **Pré-requisitos**: .NET 9 SDK instalado.
 
 ```bash
-# Na raiz do projeto UsersAPI/
+# Na raiz do projeto
 dotnet test
 
 # Com relatório de cobertura
